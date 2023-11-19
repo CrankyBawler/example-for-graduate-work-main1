@@ -1,24 +1,35 @@
 package ru.skypro.homework.controller;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import ru.skypro.homework.dto.SetPassword;
+import org.springframework.web.bind.annotation.*;
+import ru.skypro.homework.dto.UpdateUser;
+import ru.skypro.homework.dto.User;
 
 @RestController
-@RequestMapping ("/users")
 public class UserController {
-    private final SetPassword setPassword;
 
-    @PostMapping("/set_password")
-    public ResponseEntity<?> password (@RequestBody SetPassword currentPassword, @RequestBody SetPassword newPassword) {
-        if (setPassword.currentPassword(setPassword.getCurrentPassword()) {
-            return ResponseEntity.ok().build();
-        } else {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
-        }
+
+    @GetMapping("/users/{id}")
+    public User getUser(@PathVariable int id) {
+        return new User(); // Возвращает пустой объект User
     }
+
+    @PatchMapping("/users/{id}")
+    public User updateUser(@PathVariable int id, @RequestBody UpdateUser user) {
+        return new User(); // Возвращает пустой объект User
+    }
+    @PostMapping("/users/set_password")
+    public String setPassword (@PathVariable String password, @PathVariable String newPassword){
+        return newPassword; // возвращает пустой объект NewPassword
+    }
+    @PatchMapping("/users/me")
+    public User usersMe (@RequestBody User user){
+        return new User();// возвращает пустой объект User
+    }
+    @PatchMapping("/users/me/image")
+    public User userMeImage (@PathVariable User image){
+        return image; //возвращает пустое значение поля image
+    }
+    
+
 }
+

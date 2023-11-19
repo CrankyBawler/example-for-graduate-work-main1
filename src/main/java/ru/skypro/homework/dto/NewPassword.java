@@ -1,15 +1,15 @@
 package ru.skypro.homework.dto;
 
-public class SetPassword {
-    private String currentPassword;
+public class NewPassword {
+    private String Password;
     private String newPassword;
 
     public String getCurrentPassword() {
-        return currentPassword;
+        return Password;
     }
 
     public void setCurrentPassword(String currentPassword) {
-        this.currentPassword = currentPassword;
+        this.Password = currentPassword;
     }
 
     public String getNewPassword() {
