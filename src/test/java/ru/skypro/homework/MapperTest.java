@@ -11,11 +11,8 @@ import ru.skypro.homework.model.UserEntity;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static ru.skypro.homework.dto.Role.USER;
 
-@SpringBootTest
-public class MapperTest {
-    @Autowired
-    private UserMapper userMapper;
 
+public class MapperTest {
     @Test
     void userToUserTest() {
         //given
