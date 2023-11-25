@@ -1,6 +1,6 @@
 package ru.skypro.homework.model;
 
-import ru.skypro.homework.dto.UserInformationDTO;
+import ru.skypro.homework.dto.User;
 
 import javax.persistence.*;
 
@@ -15,7 +15,7 @@ public class Avatar {
     @Lob
     private byte[] data;
     @OneToOne
-    private UserInformationDTO userInformationDTO;
+    private User user;
 
     public Long getId() {
         return id;
@@ -57,11 +57,11 @@ public class Avatar {
         this.data = data;
     }
 
-    public UserInformationDTO getUserInformationDTO() {
-        return userInformationDTO;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserInformationDTO(UserInformationDTO userInformationDTO) {
-        this.userInformationDTO = userInformationDTO;
+    public void setUser(User user) {
+        this.user = user;
     }
 }

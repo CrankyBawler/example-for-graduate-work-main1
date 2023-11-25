@@ -6,6 +6,6 @@ public class Comment {
     private String authorImage;
     private String authorFirstName;
     private String text;
-    private int createdAT;
+    private int createdAt;
 
 }
